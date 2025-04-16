@@ -13,7 +13,7 @@ export default function ComponentsPage() {
                 <li>
                   <Link 
                     href="/components#installation" 
-                    className="text-secondary-foreground hover:text-primary transition-colors block py-1"
+                    className="text-secondary-foreground hover:text-primary transition-colors block py-1 font-bold"
                   >
                     Installation
                   </Link>
@@ -21,7 +21,7 @@ export default function ComponentsPage() {
               </ul>
             </div>
             <div>
-              <h3 className="font-medium mb-3">Components</h3>
+              <h3 className="font-bold mb-3">Components</h3>
               <ul className="space-y-2">
                 <li>
                   <Link 
@@ -72,6 +72,7 @@ export default function ComponentsPage() {
                   </Link>
                 </li>
               </ul>
+              <p className="text-sm text-muted-foreground mt-4 italic">More components to come...</p>
             </div>
           </nav>
         </aside>
@@ -92,16 +93,18 @@ export default function ComponentsPage() {
           {/* Slider Component */}
           <section id="slider" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Slider</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add slide_button</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`// Example usage
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add slide_button</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`// Example usage
 class SlideButtonExample extends StatelessWidget {
   const SlideButtonExample({super.key});
 
@@ -119,6 +122,15 @@ class SlideButtonExample extends StatelessWidget {
     );
   }
 }`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/4.slide-portrait.png" 
+                  alt="Slider Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
@@ -126,20 +138,31 @@ class SlideButtonExample extends StatelessWidget {
           {/* Time Picker Component */}
           <section id="time-picker" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Time Picker</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add time_picker</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`TimePicker(
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add time_picker</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`TimePicker(
   onTimeChanged: (selectedTime) {
     print('Selected time: ' + selectedTime.hour + ':' + selectedTime.minute);
   },
 )`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/3.date-portrait.png" 
+                  alt="Date Picker Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
@@ -147,21 +170,32 @@ class SlideButtonExample extends StatelessWidget {
           {/* Elevated Button Component */}
           <section id="elevated-button" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Elevated Button</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add my_custom_button</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`MyCustomButton(
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add my_custom_button</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`MyCustomButton(
   text: 'Full Width Button',
   onPressed: () {
     // Action here
   },
 )`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/2.button-portrait.png" 
+                  alt="Elevated Button Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
@@ -169,16 +203,18 @@ class SlideButtonExample extends StatelessWidget {
           {/* Password Field Component */}
           <section id="password-field" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Password Field</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add password_field</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`// Password Field
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add password_field</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`// Password Field
 PasswordField(
   hintText: 'Enter your password',
   labelText: 'Password',
@@ -189,6 +225,15 @@ PasswordField(
     return null;
   },
 )`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/1.pass-portrait.png" 
+                  alt="Password Field Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
@@ -196,16 +241,18 @@ PasswordField(
           {/* Sign In Form Component */}
           <section id="signin-form" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Sign In Form</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add signin_form</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`SigninForm(
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add signin_form</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`SigninForm(
   onSignInPressed: (email, password) {
     // Handle sign in logic
     print('Email: ' + email + ', Password: ' + password);
@@ -231,6 +278,15 @@ SigninForm(
     // Handle sign in logic
   },
 )`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/6.sign-portrait.png" 
+                  alt="Sign In Form Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
@@ -238,16 +294,18 @@ SigninForm(
           {/* Toast Component */}
           <section id="toast" className="mb-16">
             <h2 className="text-3xl font-bold mb-6">Toast</h2>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Installation</h3>
-              <div className="code-block mb-4">
-                <pre><code>dart run flutwid_ui:flutwid_ui add toast_notification</code></pre>
-              </div>
-            </div>
-            <div className="mb-4">
-              <h3 className="text-xl font-medium mb-2">Usage</h3>
-              <div className="code-block">
-                <pre><code>{`ElevatedButton(
+            <div className="flex flex-col md:flex-row gap-8 mb-6">
+              <div className="flex-1">
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Installation</h3>
+                  <div className="code-block mb-4">
+                    <pre><code>dart run flutwid_ui:flutwid_ui add toast_notification</code></pre>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <h3 className="text-xl font-medium mb-2">Usage</h3>
+                  <div className="code-block">
+                    <pre><code>{`ElevatedButton(
   onPressed: () {
     // Show a simple toast when button is clicked
     ToastNotification.show(
@@ -266,6 +324,15 @@ ToastNotification.show(
   iconColor: Colors.green,
   position: ToastPosition.top,
 );`}</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div className="md:w-1/3 flex items-center justify-center">
+                <img 
+                  src="/5.toast-portrait.png" 
+                  alt="Toast Component Preview" 
+                  className="w-64 h-auto object-contain"
+                />
               </div>
             </div>
           </section>
