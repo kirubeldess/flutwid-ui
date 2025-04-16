@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { CodeBlock } from './ui/code-block';
 
 export default function ComponentsPage() {
   return (
@@ -85,8 +86,9 @@ export default function ComponentsPage() {
             <p className="text-secondary-foreground mb-4">
               Add the package to your project using Flutter pub:  
             </p>
-            <div className="code-block mb-4">
-              <pre><code>flutter pub add flutwid_ui</code></pre>
+            <div className="mb-4">
+              <h3 className="text-xl font-medium mb-2">Installation</h3>
+              <CodeBlock code="flutter pub add flutwid_ui" />
             </div>
           </section>
 
@@ -97,32 +99,31 @@ export default function ComponentsPage() {
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add slide_button</code></pre>
-                  </div>
+                  <CodeBlock code="dart run flutwid_ui:flutwid_ui add slide_button" />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`// Example usage
-class SlideButtonExample extends StatelessWidget {
-  const SlideButtonExample({super.key});
+                  <CodeBlock 
+                    code={`// Example usage
+                      class SlideButtonExample extends StatelessWidget {
+                        const SlideButtonExample({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: SlideButton(
-        onConfirm: () {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('Action confirmed!')),
-          );
-        },
-      ),
-    );
-  }
-}`}</code></pre>
-                  </div>
+                        @override
+                        Widget build(BuildContext context) {
+                          return Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: SlideButton(
+                              onConfirm: () {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(content: Text('Action confirmed!')),
+                                );
+                              },
+                            ),
+                          );
+                        }
+                      }`} 
+                    language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
@@ -142,19 +143,18 @@ class SlideButtonExample extends StatelessWidget {
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add time_picker</code></pre>
-                  </div>
+                  <CodeBlock code="dart run flutwid_ui:flutwid_ui add time_picker" />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`TimePicker(
-  onTimeChanged: (selectedTime) {
-    print('Selected time: ' + selectedTime.hour + ':' + selectedTime.minute);
-  },
-)`}</code></pre>
-                  </div>
+                  <CodeBlock 
+                        code={`TimePicker(
+                                onTimeChanged: (selectedTime) {
+                                print('Selected time: ' + selectedTime.hour + ':' + selectedTime.minute);
+                          },
+                        )`}
+                        language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
@@ -174,20 +174,19 @@ class SlideButtonExample extends StatelessWidget {
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add my_custom_button</code></pre>
-                  </div>
+                  <CodeBlock code="dart run flutwid_ui:flutwid_ui add my_custom_button" />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`MyCustomButton(
-  text: 'Full Width Button',
-  onPressed: () {
-    // Action here
-  },
-)`}</code></pre>
-                  </div>
+                  <CodeBlock 
+                    code={`MyCustomButton(
+                      text: 'Full Width Button',
+                      onPressed: () {
+                        // Action here
+                      },
+                    )`}
+                    language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
@@ -207,25 +206,26 @@ class SlideButtonExample extends StatelessWidget {
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add password_field</code></pre>
-                  </div>
+                  <CodeBlock 
+                    code="dart run flutwid_ui:flutwid_ui add password_field" 
+                  />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`// Password Field
-PasswordField(
-  hintText: 'Enter your password',
-  labelText: 'Password',
-  validator: (value) {
-    if (value == null || value.isEmpty) {
-      return 'Please enter your password';
-    }
-    return null;
-  },
-)`}</code></pre>
-                  </div>
+                  <CodeBlock 
+                    code={`// Password Field
+                    PasswordField(
+                      hintText: 'Enter your password',
+                      labelText: 'Password',
+                      validator: (value) {
+                        if (value == null || value.isEmpty) {
+                          return 'Please enter your password';
+                        }
+                        return null;
+                      },
+                    )`}
+                    language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
@@ -245,40 +245,41 @@ PasswordField(
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add signin_form</code></pre>
-                  </div>
+                  <CodeBlock 
+                    code="dart run flutwid_ui:flutwid_ui add signin_form" 
+                  />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`SigninForm(
-  onSignInPressed: (email, password) {
-    // Handle sign in logic
-    print('Email: ' + email + ', Password: ' + password);
-  },
-  onForgotPasswordPressed: () {
-    // Handle forgot password logic
-    print('Forgot password pressed');
-  },
-)
+                  <CodeBlock 
+                    code={`SigninForm(
+                          onSignInPressed: (email, password) {
+                            // Handle sign in logic
+                            print('Email: ' + email + ', Password: ' + password);
+                          },
+                          onForgotPasswordPressed: () {
+                            // Handle forgot password logic
+                            print('Forgot password pressed');
+                          },
+                        )
 
-// Customized usage
-SigninForm(
-  backgroundColor: Colors.black,
-  primaryColor: Colors.white,
-  buttonColor: Colors.white,
-  buttonTextColor: Colors.black,
-  borderRadius: 12.0,
-  horizontalPadding: 24.0,
-  emailHintText: 'Enter your email',
-  passwordHintText: 'Enter your password',
-  signInButtonText: 'Login',
-  onSignInPressed: (email, password) {
-    // Handle sign in logic
-  },
-)`}</code></pre>
-                  </div>
+                        // Customized usage
+                        SigninForm(
+                          backgroundColor: Colors.black,
+                          primaryColor: Colors.white,
+                          buttonColor: Colors.white,
+                          buttonTextColor: Colors.black,
+                          borderRadius: 12.0,
+                          horizontalPadding: 24.0,
+                          emailHintText: 'Enter your email',
+                          passwordHintText: 'Enter your password',
+                          signInButtonText: 'Login',
+                          onSignInPressed: (email, password) {
+                            // Handle sign in logic
+                          },
+                        )`}
+                    language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
@@ -298,33 +299,34 @@ SigninForm(
               <div className="flex-1">
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Installation</h3>
-                  <div className="code-block mb-4">
-                    <pre><code>dart run flutwid_ui:flutwid_ui add toast_notification</code></pre>
-                  </div>
+                  <CodeBlock 
+                    code="dart run flutwid_ui:flutwid_ui add toast_notification" 
+                  />
                 </div>
                 <div className="mb-4">
                   <h3 className="text-xl font-medium mb-2">Usage</h3>
-                  <div className="code-block">
-                    <pre><code>{`ElevatedButton(
-  onPressed: () {
-    // Show a simple toast when button is clicked
-    ToastNotification.show(
-      context,
-      message: 'This is a simple toast message',
-    );
-  },
-  child: const Text('Show Toast'),
-)
+                  <CodeBlock 
+                    code={`ElevatedButton(
+                          onPressed: () {
+                            // Show a simple toast when button is clicked
+                            ToastNotification.show(
+                              context,
+                              message: 'This is a simple toast message',
+                            );
+                          },
+                          child: const Text('Show Toast'),
+                        )
 
-// Success toast at the top
-ToastNotification.show(
-  context,
-  message: 'Success! Your action was completed',
-  icon: Icons.check_circle,
-  iconColor: Colors.green,
-  position: ToastPosition.top,
-);`}</code></pre>
-                  </div>
+                        // Success toast at the top
+                        ToastNotification.show(
+                          context,
+                          message: 'Success! Your action was completed',
+                          icon: Icons.check_circle,
+                          iconColor: Colors.green,
+                          position: ToastPosition.top,
+                        );`}
+                    language="dart"
+                  />
                 </div>
               </div>
               <div className="md:w-1/3 flex items-center justify-center">
